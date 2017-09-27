@@ -1,0 +1,17 @@
+
+<div class="row">
+  <div class="col-md-3">
+    <% if @hero.image.present?%>
+      <%=image_tag(@hero.image.thumb.url,class:"thumbnail")%>
+    <% else %>
+      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+    <% end %>
+  </div>
+  <div class="col-md-9">
+    <h4><%=@hero.name%> - <%=@hero.star_name%></h4>
+    <h5>绰号：<%=@hero.alias%></h5>
+    <h5>主要事迹：
+    </h5>
+    <p><%=@hero.profile%></p>
+  </div>
+</div>

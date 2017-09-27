@@ -1,5 +1,5 @@
-<h1>heros page</h1>
-<% @heros.each do |hero| %>
+
+<!-- <% @heros.each do |hero| %>
 
   <div class="col-md-3">
     <%=hero.name%>
@@ -8,4 +8,20 @@
   </div>
 
 
-<% end %>
+<% end %> -->
+<section id="pinBoot">
+  <% @heros.each do |hero| %>
+  <article class="white-panel">
+    <%=link_to hero_path(hero) do %>
+    <%=image_tag(hero.image.thumb.url,class:"thumbnail")%>
+    <% end %>
+    <h4>
+      <%=link_to(hero.name,hero_path(hero))%>
+    </h4>
+    <%=hero.profile%>
+  </article>
+  <% end %>
+
+
+
+</section>

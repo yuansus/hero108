@@ -1,0 +1,9 @@
+<%= simple_form_for [:admin,@hero] do |f| %>
+  <%=f.input :star_name%>
+  <%=f.input :name%>
+  <%=f.input :alias%>
+  <%=f.input :profile%>
+  <%=f.input :rank%>
+  <%=f.input :image,as: :file%>
+  <%=f.submit "确定下凡"%>
+<%end%>
