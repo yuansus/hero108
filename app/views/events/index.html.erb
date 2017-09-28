@@ -1,0 +1,17 @@
+<h1>大事记</h1>
+<div class="pull-right">
+  <%=link_to('记一笔',new_event_path)%>
+</div>
+<br>
+<div class="row">
+
+  <% @events.each do |event|%>
+    <div class="col-md-3">
+      <h2>
+        <%= link_to event_path(event) do %>
+          <%=event.title %>
+        <% end %>
+      </h2>
+    </div>
+  <%end%>
+</div>

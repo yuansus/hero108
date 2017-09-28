@@ -1,0 +1,12 @@
+<h1>
+  <%=@event.title%>
+</h1>
+<h4 style="inline">
+  出场魔星：
+</h4>
+<% @event.hero.each do |hero|%>
+  <%= link_to(hero.name,hero_path(hero))%>
+<% end %>
+<p>
+  <%=@event.description%>
+</p>
